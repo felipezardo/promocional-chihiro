@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(./img/fundo.png) no-repeat center fixed;
+    background-size: cover;
+
+
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .cabecalho {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 70%;
+        margin: 45px;
+        ul {
+            list-style: none;
+            display: flex;
+
+            li {
+                margin: 0 10px;
+                cursor: pointer;
+&:hover{
+    transform: scale(1.1);
+    transition: 0.5s all ease-in-out;
+}
+
+            }
+
+        }
+
+
+    }
+
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+  
+
+
+    section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 70%;
+        
+
+
+
+
+
+        .texto {
+            color: #FFFFFF;
+
+
+
+            h2 {
+                font-family: 'Open Sans', sans-serif;
+                font-size: 1.25rem;
+                font-weight: 700;
+            }
+
+            h1 {
+                font-family: "Andada Pro", serif;
+                font-size: 4rem;
+                font-weight: 800;
+                width: 25vw;
+            }
+
+            p {
+                font-family: "Archivo", sans-serif;
+                font-size: 1.5rem;
+                font-weight: 500;
+                margin: 15px 0;
+                line-height: 36px;
+
+            }
+        }
+
+        .botoes {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            top: 30px;
+
+            width: 30vw;
+
+            .filme {
+                background-color: #F1A5B1;
+                border: none;
+                color: #0B0A0A;
+                border-radius: 4px;
+                font-family: "Roboto", sans-serif;
+                font-weight: 700;
+                font-size: 1.125rem;
+                padding: 10px 30px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .botao-trailer {
+                border: solid #F1A5B1;
+                background-color: transparent;
+                color: #FFFFFF;
+                border-radius: 4px;
+                font-family: "Roboto", sans-serif;
+                font-weight: 700;
+                font-size: 1.125rem;
+                padding: 10px 30px;
+                cursor: pointer;
+                &:hover{
+                    transform: scale(1.1);
+                    transition: 0.5s all ease-in-out;
+                }
+            }
+
+        }
+
+
+
+
+    }
+    .modal {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background-color:rgba(52, 52, 50, 0.749);
+        visibility: hidden;
+    }
+    
+    .conteudo-modal{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        border-radius: 5px;
+        gap: 15px;
+    }
+    
+    .fechar-modal{
+        background-color: #ffffff;
+        color: #F1A5B1;
+        font-weight: bold;
+        font-size: 20px;
+        width: 40px;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    
+    .modal iframe{
+        border-width: 0;
+        width: 640px;
+        height: 360px;
+    }
+    
+    .modal.aberto {
+        opacity: 1;
+        visibility: visible;
+    }
+}
